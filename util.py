@@ -1,10 +1,9 @@
-def nth_power(n, power):
+def nth_power(n, fn = lambda x: x**2):
     '''
     calculates power for number up to n
     '''
-    if power <= 10:
-        return [i**power for i in range(n)]
-    else:
-        return print("You've exceeded the upper limit")
 
-print(nth_power(10, 4))
+    return [fn(i) for i in range(n)]
+
+
+print(nth_power(10))
